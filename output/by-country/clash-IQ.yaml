@@ -5,18 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - xiaohe
-  server: 188.114.96.3
-  port: 443
-  udp: true
-  type: trojan
-  password: Telegram_healer_config
-  sni: cdtfrgmtcsbaarmz-9owpz7g4.f9w96pzky6un-covzx6b-hzlm80woj2.workers.dev
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /tr/3F3fUAGJks9doKvjt8AREH4QR?ed=2560
-- name: 🇮🇶 IQ 02 - xiaohe
-  server: arcturus.yokkastars.com
+  server: 178.17.57.34
   port: 40443
   udp: true
   type: vless
@@ -27,20 +16,18 @@ proxies:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
   servername: deepl.com
-  client-fingerprint: safari
+  client-fingerprint: qq
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇮🇶 IQ 01 - xiaohe
-  - 🇮🇶 IQ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇶 IQ 01 - xiaohe
-  - 🇮🇶 IQ 02 - xiaohe
 rules:
 - MATCH,PROXIES
