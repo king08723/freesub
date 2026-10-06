@@ -4,24 +4,25 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇮🇶 IQ 01 - xiaohe",
-      "server": "104.21.67.113",
-      "server_port": 443,
-      "password": "Telegram_healer_config",
+      "server": "104.18.34.21",
+      "server_port": 8443,
+      "uuid": "656bb400-3b7a-47e3-94b0-0362f3865072",
       "tls": {
         "enabled": true,
-        "server_name": "x0C3lq1A15ip-65Kc4-l1A1tx.cv4CGvqS05m-F4Hg5xU07wIAlm0.wOrkerS.DeV",
+        "server_name": "socks5.revil-time3.workers.dev",
         "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ]
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
-        "path": "/tr/rkSn26veCGpvDy162Z?ed=2560",
+        "path": "/socks5://128.140.46.169:13482",
         "headers": {
-          "Host": "x0c3lq1a15ip-65kc4-l1a1tx.cv4cgvqs05m-f4hg5xu07wialm0.workers.dev"
+          "Host": "socks5.revil-time3.workers.dev"
         }
       }
     },
