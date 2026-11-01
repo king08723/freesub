@@ -4,15 +4,15 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
-  server: 2.56.207.68
+- name: 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
+  server: 185.72.11.43
   port: 443
   udp: true
   type: vless
-  uuid: 0192c3d3-18d5-4b95-8eb3-598e18de6918
+  uuid: 689a62e4-37e7-41de-9e6a-f2a56368c9e2
   flow: xtls-rprx-vision
   tls: true
-  servername: www.slovarik.xyz
+  servername: rs8.speedtestinternet.link
   skip-cert-verify: false
   client-fingerprint: firefox
 proxy-groups:
@@ -20,12 +20,12 @@ proxy-groups:
   type: select
   proxies:
   - AUTO
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
+  - 🇷🇸 塞尔维亚 (Serbia) 01 - xiaohe
 rules:
 - MATCH,PROXIES
