@@ -2,7 +2,9 @@ name: Update Subscriptions
 
 on:
   workflow_dispatch:  # 仅保留手动触发按钮
-
+  schedule:
+    # Runs at 8 am every day
+    - cron: '0 8 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
