@@ -5,38 +5,28 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  server: 38.180.38.19
-  port: 15231
-  udp: true
-  type: ss
-  cipher: aes-128-gcm
-  password: 5126ccc78eea4c643cbed4e6c21465e8
-- name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
-  server: 95.57.50.87
-  port: 443
+  server: 38.107.234.57
+  port: 8443
   udp: true
   type: vless
-  uuid: db80088c-32a1-4cb8-a907-0f3cb7844152
-  flow: xtls-rprx-vision
+  uuid: 2424febb-43cb-488d-bdd1-401e923c8e48
   tls: true
-  reality-opts:
-    public-key: eV6ewGF7oTHf2pTQHKYvwJt-vU8hUC-1CjiUl20HtXE
-    short-id: 4000cdda6278d236
-  servername: kz1.japancase.site
-  client-fingerprint: ''
+  servername: 3h-kazakhstan1.09vpn.com
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /vless/
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe
-  - 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
 rules:
 - MATCH,PROXIES
